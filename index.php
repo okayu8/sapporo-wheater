@@ -13,4 +13,9 @@
   echo "<br>";
   echo phpQuery::newDocument($html)->find(".temp:eq(1)")->find("li")->text();
   echo "<br>";
+  echo "<br>";
+  $html_move = file_get_contents("https://weather.yahoo.co.jp/weather/satellite/");
+  echo "雲の動き";
+  echo phpQuery::newDocument($html_move)->find(".wideImage");
+
 ?>
